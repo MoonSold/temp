@@ -18,6 +18,7 @@ class HomeController extends AbstractController {
      * @Route("/check", name="check"),
      */
     public function check() {
-            return $this->json(floatval(trim(shell_exec("sensors -u | grep temp1_input | awk '/temp1_input/ {print $2; exit}'"))));
+            return $this->json(random_int(35, 47));
+            // return $this->json(floatval(trim(shell_exec("sensors -u | grep temp1_input | awk '/temp1_input/ {print $2; exit}'"))));
         }
     }
