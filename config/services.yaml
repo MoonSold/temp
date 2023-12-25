@@ -20,5 +20,16 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    # config/services.yaml
+    App\Controller\HomeController:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\Controller\MainController:
+        autowire: true
+        autoconfigure: true
+        public: false
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
